@@ -28,11 +28,11 @@ Responsive Design: The app is designed to work seamlessly on various devices, al
 
 2. Clone the repository:
 
-  - `$ git clone https://github.com/your-username/basic-expense-tracker.git`
+  - `$ git clone https://github.com/your-username/contact-list-app.git`
 
 3. Navigate to the project directory:
 
-  - `$ cd ./basic-expense-tracker` (name of folder may vary)
+  - `$ cd ./contact-list-app` (name of folder may vary)
 
 4. Install dependencies:
 
