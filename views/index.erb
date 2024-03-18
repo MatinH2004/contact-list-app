@@ -1,0 +1,35 @@
+<section style="display: inline">
+  <h3>Preview List</h3>
+  <a class="button-link" href="/new">New Contact</a><br>
+  <a class="button-link" href="/view">View Contacts</a>
+</section>
+<br>
+<main>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Email</th>
+    <th>Category</th>
+    <th>Delete</th>
+  </tr>
+  <% @contacts.each do |contact| %>
+    <tr>
+      <td><%= contact[:name] %></td>
+      <td>
+      <a href="tel:<%= contact[:number] %>"><%= contact[:number] %></a>
+      </td>
+      <td>
+        <a href="mailto:<%= contact[:email] %>"><%= contact[:email] %></a>
+      </td>
+      <td><%= contact[:category] %></td>
+      <td>
+        <form method="post" action="/delete/<%= contact[:id] %>">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <% end %>
+    </table>
+    <p>Showing top <%= @contacts.size %> results...</p>
+</main>
